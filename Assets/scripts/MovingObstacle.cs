@@ -18,8 +18,8 @@ public class MovingObstacle : MonoBehaviour
         float vX = transform.position.x;
         float vY = transform.position.y;
         transform.Translate(spdX, spdY, 0, Space.World);
-        if(vY>7f) {transform.position  = new Vector2(vX, -8f);}
-        if(vY<-8f) {transform.position  = new Vector2(vX, 7f);}
+        if(vY>7f) {transform.position  = new Vector2(Random.Range(-4f, 6.5f), -8f);}
+        if(vY<-8f) {transform.position  = new Vector2(Random.Range(-4f, 6.5f), 7f);}
 
         float newSize = transform.localScale.x;
         if (grow)
